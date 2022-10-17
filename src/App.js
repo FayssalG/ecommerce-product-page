@@ -151,7 +151,7 @@ function App() {
                 <section className='px-4'>
                     {/* Title and Descriptin  */}
                     <p className='font-[700] text-xs text-orange '>SNEAKER COMPANY</p>
-                    <h1 id='product' className='font-[700] text-[2.5rem] text-very-dark-blue'>Fall Limited Edition Sneakers</h1>
+                    <h1 id='product' className='font-[700] leading-[3rem] text-[2.5rem] text-very-dark-blue'>Fall Limited Edition Sneakers</h1>
                     <p className='text-sm text-dark-grayish-blue my-6'>
                         These low-profile sneakers are your perfect casual wear companion. Featuring a 
                         durable rubber outer sole, they’ll withstand everything the weather can offer.
@@ -172,12 +172,13 @@ function App() {
                     {/* Buttons  */}
                     <div className='grid gap-2 [&>*]:px-2 [&>*]:rounded [&>*]:h-10  mt-4  lg:grid-cols-[1fr,2fr]'>
                         <div className='flex justify-between items-center bg-light-grayish-blue' >
-                            <img className='cursor-pointer select-none' onClick={()=>handleNumOfItems(numOfItems-1)} src='./assets/icon-minus.svg'></img>
+                            <img className='cursor-pointer select-none hover:opacity-70' onClick={()=>handleNumOfItems(numOfItems-1)} src='./assets/icon-minus.svg'></img>
                             <span id='items-number'>{numOfItems}</span>
-                            <img className='cursor-pointer select-none' onClick={()=>handleNumOfItems(numOfItems+1)} src='./assets/icon-plus.svg'></img>
+                            <img className='cursor-pointer select-none hover:opacity-70' onClick={()=>handleNumOfItems(numOfItems+1)} src='./assets/icon-plus.svg'></img>
                         </div>
 
-                        <button onClick={()=>handleCartAdd()} className='bg-orange text-white text-sm font-[700] w-full'>Add to cart</button>
+                        <button onClick={()=>handleCartAdd()} className='relative bg-orange text-white text-sm font-[700] w-full hover:opacity-70
+                        after:w-5 after:h-5 after:absolute  after:bg-[url("../public/assets/icon-cart-white.svg")] after:bg-center after:left-[25%]  md:after:left-[40%] lg:after:left-[20%]'>Add to cart</button>
                     </div>
                     {/* END Buttons */}
                 </section>

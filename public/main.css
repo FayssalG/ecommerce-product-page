@@ -819,6 +819,9 @@ video {
 .font-\[700\] {
   font-weight: 700;
 }
+.leading-\[3rem\] {
+  line-height: 3rem;
+}
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -852,9 +855,36 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.after\:absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+.after\:left-\[25\%\]::after {
+  content: var(--tw-content);
+  left: 25%;
+}
+.after\:h-5::after {
+  content: var(--tw-content);
+  height: 1.25rem;
+}
+.after\:w-5::after {
+  content: var(--tw-content);
+  width: 1.25rem;
+}
+.after\:bg-\[url\(\"\.\.\/public\/assets\/icon-cart-white\.svg\"\)\]::after {
+  content: var(--tw-content);
+  background-image: url(5d69279c2cf158aff9a5.svg);
+}
+.after\:bg-center::after {
+  content: var(--tw-content);
+  background-position: center;
+}
 .hover\:border-orange:hover {
   --tw-border-opacity: 1;
   border-color: hsl(26 100% 55% / var(--tw-border-opacity));
+}
+.hover\:opacity-70:hover {
+  opacity: 0.7;
 }
 .hover\:contrast-200:hover {
   --tw-contrast: contrast(2);
@@ -943,6 +973,11 @@ video {
     color: hsl(219 9% 45% / var(--tw-text-opacity));
   }
 
+  .md\:after\:left-\[40\%\]::after {
+    content: var(--tw-content);
+    left: 40%;
+  }
+
   .md\:hover\:border-orange:hover {
     --tw-border-opacity: 1;
     border-color: hsl(26 100% 55% / var(--tw-border-opacity));
@@ -1015,6 +1050,11 @@ video {
 
   .lg\:border-b {
     border-bottom-width: 1px;
+  }
+
+  .lg\:after\:left-\[20\%\]::after {
+    content: var(--tw-content);
+    left: 20%;
   }
 }
 .\[\&\>a\]\:cursor-pointer>a {
