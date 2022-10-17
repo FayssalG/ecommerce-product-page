@@ -100,7 +100,7 @@ function App() {
                 </div>
                 {/* END Logo and Menu icon*/}
 
-                <nav className='animate-slideIn hidden absolute left-0 top-0 bg-white z-40 h-[100vh] w-1/2 md:block md:static md:h-full'>
+                <nav className='animate-slideIn hidden absolute left-0 top-0 bg-white z-30 h-[100vh] w-1/2 md:block md:static md:h-full'>
                    <div onClick={()=>slideBar()} className='w-1/2 mx-auto  mt-4 cursor-pointer md:hidden'><img src='./assets/icon-close.svg'></img></div>
                    <ul className='flex flex-col w-1/2 h-full items-start mx-auto mt-9  gap-4   [&>a]:cursor-pointer md:flex-row md:m-0 md:gap-10  '>
                         <li className='font-[700] sm:hover:text-orange md:font-[400] md:text-dark-grayish-blue md:h-full md:flex md:items-center md:border-b-2 md:border-transparent md:hover:border-orange '><a href='#'>Collections</a></li>
@@ -137,7 +137,7 @@ function App() {
                 </Carousel>                
 
                     {/* LightBox carousel */}
-                <div id='light-box' className='hidden fixed left-0 top-0 w-full h-full flex flex-col justify-center items-center bg-black/75'>
+                <div id='light-box' className='hidden fixed z-40 left-0 top-0 w-full h-full flex flex-col justify-center items-center bg-black/75'>
                     <div onClick={()=>{hideLightBox()}} className='w-96 py-2 flex justify-end'><img src='./assets/icon-close.svg'></img></div>
                     <CarouselLightBox>
                             <img src='./assets/image-product-1.jpg'></img>
@@ -151,7 +151,7 @@ function App() {
                 <section className='px-4'>
                     {/* Title and Descriptin  */}
                     <p className='font-[700] text-xs text-orange '>SNEAKER COMPANY</p>
-                    <h1 id='product' className='font-[700] text-3xl'>Fall Limited Edition Sneakers</h1>
+                    <h1 id='product' className='font-[700] text-[2.5rem] text-very-dark-blue'>Fall Limited Edition Sneakers</h1>
                     <p className='text-sm text-dark-grayish-blue my-6'>
                         These low-profile sneakers are your perfect casual wear companion. Featuring a 
                         durable rubber outer sole, they’ll withstand everything the weather can offer.

@@ -370,6 +370,9 @@ video {
   max-width: 100%;
   height: auto;
 }
+    html{
+        font-family: 'Kumbh Sans' , sans-serif;
+    }
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -535,6 +538,9 @@ video {
 }
 .top-20 {
   top: 5rem;
+}
+.z-30 {
+  z-index: 30;
 }
 .z-40 {
   z-index: 40;
@@ -799,9 +805,8 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-\[2\.5rem\] {
+  font-size: 2.5rem;
 }
 .text-sm {
   font-size: 0.875rem;
@@ -821,6 +826,10 @@ video {
 .text-orange {
   --tw-text-opacity: 1;
   color: hsl(26 100% 55% / var(--tw-text-opacity));
+}
+.text-very-dark-blue {
+  --tw-text-opacity: 1;
+  color: hsl(220 13% 13% / var(--tw-text-opacity));
 }
 .text-dark-grayish-blue {
   --tw-text-opacity: 1;
