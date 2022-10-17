@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .thumbnail-active {
+        border: solid 2px;
+        @apply border-orange;
+        opacity: 40%;
+    }
+
+    .li-style{
+        @apply text-very-dark-blue;
+        @apply h-8;
+        @apply items-center;
+        @apply hover:text-orange;
+    }
+
+    
+}
