@@ -21,5 +21,11 @@
         @apply hover:text-orange;
     }
 
-    
+    .close-slide{
+        @apply hidden md:block
+    }
+
+    .open-slide{
+        @apply block md:block
+    }
 }
