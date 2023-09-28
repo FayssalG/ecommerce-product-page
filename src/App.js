@@ -72,12 +72,8 @@ function App() {
 
     const slideBar = ()=>{
         const nav= document.querySelector('nav')
-        if (nav.style.display == 'block') {
-            nav.style.display = 'none'
-        }
-        else{
-            nav.style.display = 'block'
-        }
+        nav.classList.toggle('open-slide')
+
     }
 
     const handleDelete = (e)=>{
@@ -100,7 +96,7 @@ function App() {
                 </div>
                 {/* END Logo and Menu icon*/}
 
-                <nav className='animate-slideIn hidden absolute left-0 top-0 bg-white z-30 h-[100vh] w-1/2 md:block md:static md:h-full'>
+                <nav className='close-slide absolute left-0 top-0 bg-white z-30 h-[100vh] w-1/2 sm:animate-slideIn  md:open-slide md:static md:h-full'>
                    <div onClick={()=>slideBar()} className='w-1/2 mx-auto  mt-4 cursor-pointer md:hidden'><img src='./assets/icon-close.svg'></img></div>
                    <ul className='flex flex-col w-1/2 h-full items-start mx-auto mt-9  gap-4   [&>a]:cursor-pointer md:flex-row md:m-0 md:gap-10  '>
                         <li className='font-[700] sm:hover:text-orange md:font-[400] md:text-dark-grayish-blue md:h-full md:flex md:items-center md:border-b-2 md:border-transparent md:hover:border-orange '><a href='#'>Collections</a></li>
@@ -114,8 +110,8 @@ function App() {
                 {/* Cart and Avatar */}
                 <div className='flex items-center justify-end gap-4 md:gap-6'>
                     {/* cart */}
-                    <div onClick={()=>{hideCart()}} className='relative flex justify-end w-10 cursor-pointer md:w-14'>
-                        <img className='hover:contrast-200' src='./assets/icon-cart.svg'></img>
+                    <div onClick={()=>{hideCart()}} className='relative flex justify-end w-10  md:w-14'>
+                        <img className='cursor-pointer hover:contrast-200' src='./assets/icon-cart.svg'></img>
                         { cart.length > 0 &&<div className='absolute flex justify-center items-center rounded-md top-0 right-0 w-3 h-3 text-[8px] text-white bg-orange'>{cart.length}</div>}  
                     </div>
                     
@@ -127,7 +123,7 @@ function App() {
                 {/* END Cart and Avatar*/}
             </header> 
 
-            <main className='grid gap-4 lg:grid-cols-[400px_400px] lg:justify-evenly lg:mt-14 lg:items-center'>
+            <main className='grid gap-4 lg:grid-cols-[400px_400px] lg:justify-evenly lg:h-[90vh] lg:items-center'>
                 {/* Carousel */}
                 <Carousel>
                         <img onClick={()=>hideLightBox()} src='./assets/image-product-1.jpg'></img>
@@ -138,7 +134,9 @@ function App() {
 
                     {/* LightBox carousel */}
                 <div id='light-box' className='hidden fixed z-40 left-0 top-0 w-full h-full flex flex-col justify-center items-center bg-black/75'>
-                    <div onClick={()=>{hideLightBox()}} className='w-96 py-2 flex justify-end'><img src='./assets/icon-close.svg'></img></div>
+                    {/* Close Icon */}
+                    <div onClick={()=>{hideLightBox()}} className='w-96 py-2 flex justify-end cursor-pointer'><img src='./assets/icon-close.svg'></img></div>
+                    {/* //////// */}
                     <CarouselLightBox>
                             <img src='./assets/image-product-1.jpg'></img>
                             <img src='./assets/image-product-2.jpg'></img>

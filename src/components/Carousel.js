@@ -27,8 +27,8 @@ export default function Carousel({children}) {
     }
 
     const handlers = useSwipeable({
-        onSwipedLeft : ()=>updateArrows(active+1),
-        onSwipedRight : ()=>updateArrows(active-1)
+        onSwipedLeft : ()=>updateByArrows(active+1),
+        onSwipedRight : ()=>updateByArrows(active-1)
     })
 
     return(
@@ -36,7 +36,7 @@ export default function Carousel({children}) {
         <div  {...handlers} className='relative overflow-hidden  lg:h-96 lg:w-96 lg:rounded-lg'>
             <div onClick={()=>updateByArrows(active+1)} className='flex z-10 items-center justify-center w-8 h-8 absolute bottom-1/2 right-2 rounded-2xl bg-light-grayish-blue select-none [&>img]:w-2 cursor-pointer lg:hidden'><img  src='./assets/icon-next.svg'></img></div>
  
-            <div className='flex  h-full w-full transition-transform ' style={{transform : `translateX(-${active * 100}%)`}}>
+            <div className='flex  h-full w-full transition-transform  cursor-pointer' style={{transform : `translateX(-${active * 100}%)`}}>
                 {React.Children.map(children , (item , index)=>{
                     return cloneElement(item)
                 })}
